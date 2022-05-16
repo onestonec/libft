@@ -15,19 +15,12 @@
 void *ft_memcpy(void *dest, const void * src, size_t n){
 	char* d1 = dest;
 	const char* s1 = src;
-	
-	if(s1 < d1){
-		for (s2 += n, d1 += n; n < 0; n--){
-			*d1 = *s1;
-			d1--;
-			s1--;
-		}
-	} else {
-		for(size_t i = 0; i < n; i++){
-		*d1 = *s1;
-		d1++;
-		s1++;
+
+	for(size_t i = 0; i < n; i++){
+	*d1 = *s1;
+	d1++;
+	s1++;
 	}
-	}
+
 	return dest;
 }
