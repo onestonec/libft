@@ -2,17 +2,22 @@
 #include <ctype.h>
 
 int main(){
-    char a[16] = "abcdefghijklmnop";
-    char b[16];
+    char str1[15];
+   char str2[15];
+   int ret;
 
-    memcpy(b,a,16);           // valid
-    puts(b);
-    memmove(&a[0], &a[1],10);          // Also valid, but slower than memcpy.
-    puts(a);
-    //memcpy(&a[0], &a[1],10);  // Not valid since it overlaps.
-    ft_memmove(&a[0], &a[1],10); // valid. 
+   memcpy(str1, "abcdef", 6);
+   memcpy(str2, "ABCDEF", 6);
 
-    puts(a);
-    
-    return 0;
+   ret = ft_memcmp(str1, str2, 5);
+
+   if(ret > 0) {
+      printf("str2 is less than str1");
+   } else if(ret < 0) {
+      printf("str1 is less than str2");
+   } else {
+      printf("str1 is equal to str2");
+   }
+   
+   return(0);
 }

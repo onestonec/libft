@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 20:47:13 by wcheung           #+#    #+#             */
-/*   Updated: 2022/05/16 20:50:51 by wcheung          ###   ########.fr       */
+/*   Created: 2022/05/16 21:05:02 by wcheung           #+#    #+#             */
+/*   Updated: 2022/05/16 21:14:11 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void* ptr, int value, size_t num){
-	printf("sbc");
-	unsigned char* p1 = (unsigned char*) ptr;
-	if(!ptr){
-		return NULL;
-	}
-	
-	for(size_t i = 0; i < num; i++){
-		if(*p1 == value){
-			return p1;
-		} else {
-			p1++;
+int ft_memcmp(const void *str1, const void *str2, size_t n){
+	unsigned char *s1 = (unsigned char *)str1;
+	unsigned char *s2 = (unsigned char *)str2;
+
+	while(n > 0){
+		if(*s1 < *s2){
+			return -1;
+		} else if (*s2 < *s1){
+			return 1;
 		}
+		s1++;
+		s2++;
+		n--;	
 	}
+
+	return 0;
 }
