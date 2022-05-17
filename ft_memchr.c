@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 19:39:26 by wcheung           #+#    #+#             */
-/*   Updated: 2022/05/15 20:11:33 by wcheung          ###   ########.fr       */
+/*   Created: 2022/05/16 20:47:13 by wcheung           #+#    #+#             */
+/*   Updated: 2022/05/16 20:50:51 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void* dest, const void* src, size_t n){
-	unsigned char* d1 = dest;
-	const unsigned char *s1 = src;
-	
-	if(s1 < d1){
-		for (s1 += n, d1 += n; n > 0; n--){
-			*d1 = *s1;
-			d1--;
-			s1--;
-		}
-	} else {
-		for(size_t i = 0; i < n; i++){
-		*d1 = *s1;
-		d1++;
-		s1++;
+void *ft_memchr(const void* ptr, int value, size_t num){
+	const unsigned char* p1 = (unsigned char*) ptr;
+	for(size_t i = 0; i < num; i++){
+		if(*p1 == value){
+			return p1;
+		} else {
+			p1++;
 		}
 	}
-	return dest;
 }
