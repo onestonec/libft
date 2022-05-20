@@ -2,22 +2,13 @@
 #include <ctype.h>
 
 int main(){
-    char str1[15];
-   char str2[15];
-   int ret;
+   char word[] = "Hello";
 
-   memcpy(str1, "abcdef", 6);
-   memcpy(str2, "ABCDEF", 6);
+   char new[100];
+   ft_strncpy(new, word,2);
 
-   ret = ft_memcmp(str1, str2, 5);
-
-   if(ret > 0) {
-      printf("str2 is less than str1");
-   } else if(ret < 0) {
-      printf("str1 is less than str2");
-   } else {
-      printf("str1 is equal to str2");
-   }
+   printf("%s", new);
+   
    
    return(0);
 }
