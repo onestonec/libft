@@ -2,13 +2,13 @@
 #include <ctype.h>
 
 int main(){
-    const char str[] = "http";
-   const char ch = 'h';
+    const char haystack[20] = "TutorialsPoint";
+   const char *needle = "oin";
    char *ret;
 
-   ret = ft_strrchr(str, ch);
+   
 
-   printf("String after |%c| is - |%s|\n", ch, ret);
+   printf("The substring is: %s\n", ft_strnstr(haystack, needle,30));
    
    return(0);
 }
