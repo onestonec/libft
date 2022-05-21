@@ -3,7 +3,7 @@
 
 int main(){
     // Take any two strings
-   int c = atoi("   +9 ");
+   int c = atoi("- 9 ");
 
    printf("%d", c);
    
