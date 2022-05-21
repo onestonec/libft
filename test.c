@@ -2,10 +2,13 @@
 #include <ctype.h>
 
 int main(){
-    // Take any two strings
-   int c = atoi("- 9 ");
+    const char str[] = "http";
+   const char ch = 'h';
+   char *ret;
 
-   printf("%d", c);
+   ret = ft_strrchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
    
    return(0);
 }
