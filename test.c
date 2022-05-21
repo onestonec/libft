@@ -11,7 +11,9 @@ int main(){
    //ft_strlcat(dest, src, 5);
      
    // Prints the string
-   printf("ft_isalnum:  %d\n", ft_isalnum('1'));
+   int test = 97;
+   printf("ft_isalnum:  %c\n", toupper(test));
+   printf("ft_isalnum:  %c\n", ft_toupper(test));
    //printf("Destination string : %s", dest);
    
    return(0);
