@@ -2,12 +2,16 @@
 #include <ctype.h>
 
 int main(){
-   char word[] = "Hello";
+    char src[50], dest[50];
 
-   char new[100];
-   ft_strncpy(new, word,2);
+   ft_strcpy(src,  "This is source");
+   ft_strcpy(dest, "This is destination");
 
-   printf("%s", new);
+   ft_strcat(dest, src);
+
+   printf("Final destination string : |%s|", dest);
+   
+   return(0);
    
    
    return(0);
