@@ -3,11 +3,12 @@
 
 int main(){
     // Take any two strings
-   char src[50] = "efghijkl";
+   char src[20] = "efghijkl";
    char dest[50]= "abcd";
+   char s[6] = {'s', 't', 'r', 'i', 'n', 'g'};
   
    // Appends 5 character from src to dest
-   ft_strncat(dest, src, 5);
+   ft_strlcat(dest, src, 5);
      
    // Prints the string
    printf("Source string : %s\n", src);

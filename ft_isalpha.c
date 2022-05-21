@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcheung <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 21:00:47 by wcheung           #+#    #+#             */
-/*   Updated: 2022/05/19 21:01:49 by wcheung          ###   ########.fr       */
+/*   Created: 2022/05/21 08:01:35 by wcheung           #+#    #+#             */
+/*   Updated: 2022/05/21 08:02:57 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strncpy(char *dest, const char *src, size_t c){
-	int length = 0;
-    if(!dest){
-        return NULL;
-    }
+int ft_isalpha(int c){
 
-    for(int i = 0; i < c; i++){
-        dest[i] = src[i];
-    }
-    dest[c] = '\0';
-    return dest;
 }
