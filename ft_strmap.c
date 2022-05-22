@@ -6,7 +6,7 @@
 /*   By: wcheung <wcheung@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 20:19:07 by wcheung           #+#    #+#             */
-/*   Updated: 2022/05/21 20:25:13 by wcheung          ###   ########.fr       */
+/*   Updated: 2022/05/22 09:41:21 by wcheung          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char *ft_strmap(char const *s, char (*f)(char)){
 	for(size_t i = 0; i < length; i++){
 		res[i] = f(s[i]);
 	}
+	res[length] = '\0';
 	return res;
 
 }
