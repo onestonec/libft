@@ -2,11 +2,10 @@
 #include <ctype.h>
 
 int main () {
-   char a[] = "abcde";
-   printf("%s", a);
-printf("%s", a);
-   ft_strclr(a);
-  printf("%d", a[0]);
+   char *a = "abcdef";
+   char *b = "abCdef";
+
+   printf("%d\n", ft_strnequ(a,b,4));
    
    return(0);
 }
