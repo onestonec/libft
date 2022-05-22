@@ -3,9 +3,9 @@
 
 int main () {
    char *a = "abcdef";
-   char *b = "abCdef";
+   char *res = ft_strsub(a, 1, 6);
 
-   printf("%d\n", ft_strnequ(a,b,4));
+   printf("%s\n", res);
    
    return(0);
 }
