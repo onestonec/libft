@@ -2,13 +2,11 @@
 #include <ctype.h>
 
 int main () {
-   int *a;
-
-   a = ft_memalloc(20);
-   for (int i = 0; i < 5; i++){
-
-       printf("%d", a[i]);
-   }
+   char a[] = "abcde";
+   printf("%s", a);
+printf("%s", a);
+   ft_strclr(a);
+  printf("%d", a[0]);
    
    return(0);
 }
