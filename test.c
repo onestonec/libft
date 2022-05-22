@@ -7,6 +7,6 @@ int main () {
    //char **res = ft_strsplit(a, '*');
    
    //printf("%s\n", res);
-   ft_putstr(b);
+   ft_putnbr(-1);
    return(0);
 }
