@@ -2,11 +2,9 @@
 #include <ctype.h>
 
 int main () {
-   char *a = "hello*fellow***students*c";
-   char *b = "ABCDEF";
-   //char **res = ft_strsplit(a, '*');
-   
-   //printf("%s\n", res);
-   ft_putnbr(-1);
+   //char *a = "abc";
+   int fd = open("abc.txt", O_RDWR | O_CREAT);
+   ft_putnbr_fd(-123, fd);
+   close(fd);
    return(0);
 }
