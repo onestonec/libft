@@ -2,9 +2,11 @@
 #include <ctype.h>
 
 int main () {
-   //char *a = "abc";
-   int fd = open("abc.txt", O_RDWR | O_CREAT);
-   ft_putnbr_fd(-123, fd);
-   close(fd);
+   
+   char *a = ft_itoa(0);
+
+   printf("%s\n", a);
+
+ 
    return(0);
 }
