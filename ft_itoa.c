@@ -59,7 +59,7 @@ char *ft_itoa(int n){
 		return NULL;
 	}
 
-	for(size_t i = 0; i < counter; i++){
+	for(int i = 0; i < counter; i++){
 		res_copy[i] = (char)(n % 10 + 48);
 		n = n / 10;
 	}
@@ -67,13 +67,13 @@ char *ft_itoa(int n){
 	//Copying from the "Reversed Array" into the return array
 	if(sign == -1){
 		res[0] = '-';
-		for (size_t i = counter - 1, j = 1; i >= 0, (j < counter + 1); i--, j++){
+		for (int i = counter - 1, j = 1; (i >= 0) && (j < counter + 1); i--, j++){
 			res[j] = res_copy[i];
 		}
 		res[counter + 1] = '\0';
 		return res;
 	} 
-	for(size_t i = counter - 1, j = 0; i >= 0, j < counter; i--, j++){
+	for(int i = counter - 1, j = 0; (i >= 0) && (j < counter); i--, j++){
 		res[j] = res_copy[i];
 	}
 	res[counter] = '\0';
